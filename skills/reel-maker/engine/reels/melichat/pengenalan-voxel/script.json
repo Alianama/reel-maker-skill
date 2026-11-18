@@ -1,0 +1,164 @@
+{
+  "title": "Melichat: cara kerjanya",
+  "style": "voxel",
+  "voice": false,
+  "music": "music/chiptune.wav",
+  "scenes": [
+    {
+      "label": "hook · chat numpuk",
+      "bg": "cork",
+      "text": "Jam 2 pagi, chat pelanggan *numpuk* dan nggak ada yang balas.",
+      "duration": 4.5,
+      "visual": {
+        "type": "notifs",
+        "items": [
+          { "channel": "whatsapp", "name": "Rina", "text": "Kak, sepatu 42 ada?" },
+          { "channel": "instagram", "name": "budi.store", "text": "Harga grosir berapa?" },
+          { "channel": "telegram", "name": "Sari", "text": "Bisa COD?" },
+          { "channel": "website", "name": "Pengunjung", "text": "Halo, masih buka?" },
+          { "channel": "messenger", "name": "Dimas", "text": "Ongkir ke Medan?" }
+        ]
+      },
+      "fx": [{ "type": "burst", "at": "numpuk", "x": 0, "y": -300 }]
+    },
+    {
+      "label": "roadmap",
+      "text": "Kenalin *Melichat*. Begini cara kerjanya.",
+      "headline": { "text": "CARA *KERJA*", "at": "begini" },
+      "beats": [
+        { "visual": { "type": "app", "name": "Meli*chat*", "color": "#A3E635", "icon": "message" } },
+        {
+          "at": "begini",
+          "visual": {
+            "type": "steps",
+            "items": [
+              { "title": "Chat masuk", "icon": "inbox" },
+              { "title": "Bot balas", "icon": "robot-face-happy" },
+              { "title": "Skor lead", "icon": "target" },
+              { "title": "Oper ke tim", "icon": "users" }
+            ]
+          }
+        }
+      ],
+      "fx": [{ "type": "punch", "at": "melichat" }]
+    },
+    {
+      "label": "1 · satu inbox",
+      "transition": "halftone",
+      "text": "Semua chat dari WhatsApp, Instagram, Telegram, sampai website masuk ke *satu inbox*.",
+      "headline": { "text": "SATU *INBOX*", "num": 1, "at": "semua" },
+      "visual": {
+        "type": "inbox",
+        "items": [
+          { "name": "Rina Putri", "channel": "whatsapp", "text": "Kak, sepatu hitam 42 ada?", "unread": 2 },
+          { "name": "budi.store", "channel": "instagram", "text": "Harga grosir berapa kak?", "unread": 1 },
+          { "name": "Sari", "channel": "telegram", "text": "Bot: Bisa, Kak. COD area Jakarta", "status": "bot" },
+          { "name": "Dimas", "channel": "messenger", "text": "Mau komplain pesanan", "status": "wait", "unread": 3 },
+          { "name": "Pengunjung", "channel": "website", "text": "Halo, masih buka?", "unread": 1 }
+        ]
+      },
+      "fx": [{ "type": "check", "at": "inbox", "x": 380, "y": -420 }]
+    },
+    {
+      "label": "2 · bot balas",
+      "transition": "halftone",
+      "text": "Bot langsung *membalas* pakai info bisnis kamu, lengkap dengan tombol pilihan.",
+      "duration": 8,
+      "headline": { "text": "BOT *BALAS*", "num": 2, "at": "bot" },
+      "visual": {
+        "type": "chat",
+        "contact": "Rina Putri",
+        "channel": "whatsapp",
+        "messages": [
+          { "from": "customer", "text": "Kak, sepatu hitam size 42 ada?" },
+          { "from": "bot", "text": "Ada, Kak! Mau ambil berapa pasang?", "buttons": ["1 pasang", "Grosir"] },
+          { "from": "customer", "text": "Grosir, 20 pasang." },
+          { "from": "bot", "text": "Siap, aku catat. Kirim ke kota mana?" },
+          { "from": "customer", "text": "Bandung, Kak." }
+        ]
+      },
+      "fx": [{ "type": "ring", "at": "tombol", "x": 250, "y": -80 }]
+    },
+    {
+      "label": "3 · skor lead",
+      "transition": "halftone",
+      "text": "Dari jawaban itu, bot mencatat kebutuhan dan kasih *skor lead* otomatis.",
+      "duration": 6.5,
+      "headline": { "text": "SKOR *LEAD*", "num": 3, "at": "dari" },
+      "visual": {
+        "type": "lead",
+        "name": "Rina Putri",
+        "channel": "whatsapp",
+        "score": 86,
+        "intents": ["ingin beli", "tanya harga"],
+        "fields": [
+          { "label": "Produk", "value": "Sepatu hitam 42" },
+          { "label": "Jumlah", "value": "20 pasang" },
+          { "label": "Kota", "value": "Bandung" }
+        ]
+      },
+      "fx": [{ "type": "burst", "at": "otomatis", "x": 280, "y": -380 }]
+    },
+    {
+      "label": "4 · oper ke tim",
+      "transition": "halftone",
+      "text": "Lead panas langsung *dioper* ke tim kamu. Tim bisa ambil alih kapan saja.",
+      "duration": 8,
+      "headline": { "text": "OPER KE *TIM*", "num": 4, "at": "lead" },
+      "visual": {
+        "type": "chat",
+        "contact": "Rina Putri",
+        "channel": "whatsapp",
+        "messages": [
+          { "from": "customer", "text": "Bandung, Kak." },
+          { "from": "bot", "text": "Makasih! Tim sales kami lanjut bantu ya." },
+          { "from": "note", "text": "Skor 86, reseller. Prioritas!" },
+          { "from": "event", "text": "Andi mengambil alih" },
+          { "from": "agent", "name": "Andi · Sales", "text": "Halo Kak Rina, 20 pasang dapat harga grosir ya!", "order": { "title": "Sepatu hitam 42 × 20", "price": "Rp 7.000.000" } }
+        ]
+      },
+      "fx": [{ "type": "punch", "at": "ambil" }]
+    },
+    {
+      "label": "contoh · pipeline",
+      "transition": "whip",
+      "text": "Dari obrolan sampai *transaksi*, semuanya kepantau di pipeline.",
+      "duration": 5.5,
+      "visual": {
+        "type": "pipeline",
+        "columns": ["Baru", "Kualifikasi", "Penawaran", "Berhasil"],
+        "deal": { "title": "Rina · 20 psg", "value": "Rp 7 jt" }
+      },
+      "fx": [{ "type": "burst", "at": "pipeline", "x": 340, "y": -120 }]
+    },
+    {
+      "label": "the truth",
+      "transition": "zoom",
+      "text": "Kamu fokus *jualan*, bot yang jaga chat 24 jam.",
+      "visual": {
+        "type": "compare",
+        "left": { "title": "Tanpa Melichat", "items": ["Balas manual", "Chat terlewat", "Lead hilang"] },
+        "right": { "title": "Pakai Melichat", "items": ["Bot 24 jam", "Satu inbox", "Lead berskor"] }
+      },
+      "fx": [{ "type": "ring", "at": "bot", "x": 235 }]
+    },
+    {
+      "label": "the action",
+      "bg": "dark",
+      "transition": "halftone",
+      "text": "Jangan biarkan pelanggan kamu *nunggu* lagi.",
+      "visual": { "type": "bigText", "text": "BALAS *SEKARANG*" },
+      "fx": [{ "type": "burst", "at": "nunggu" }]
+    },
+    {
+      "label": "the cta",
+      "transition": "zoom",
+      "text": "Mau coba Melichat 14 hari? Komen *CHAT*, aku kirim link-nya.",
+      "visual": { "type": "cta", "keyword": "CHAT" },
+      "fx": [
+        { "type": "burst", "at": "komen" },
+        { "type": "ring", "at": "kirim" }
+      ]
+    }
+  ]
+}

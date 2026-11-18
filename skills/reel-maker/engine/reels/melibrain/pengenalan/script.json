@@ -1,0 +1,160 @@
+{
+  "title": "Melibrain: tanya dokumen kantor",
+  "style": "lime",
+  "voice": false,
+  "music": "music/lofi.wav",
+  "scenes": [
+    {
+      "label": "hook · dokumen numpuk",
+      "bg": "cork",
+      "text": "Dokumen kantor ratusan, tapi cari *satu jawaban* bisa setengah jam.",
+      "duration": 5,
+      "visual": {
+        "type": "pile",
+        "files": ["SOP_final_v3.pdf", "Kebijakan_HR.docx", "Memo_direksi.pdf", "FAQ_karyawan.md", "Data_cuti.csv", "Panduan_IT.pdf", "Notulen_rapat.txt", "Kontrak_kerja.pdf"]
+      },
+      "fx": [{ "type": "x", "at": "setengah", "y": 100 }]
+    },
+    {
+      "label": "roadmap",
+      "text": "Kenalin *Melibrain*. Tanya dokumen kantor semudah tanya rekan kerja.",
+      "headline": { "text": "TANYA *DOKUMEN*", "at": "tanya" },
+      "beats": [
+        { "visual": { "type": "app", "name": "Meli*brain*", "color": "#4D7C0F", "icon": "brain" } },
+        {
+          "at": "tanya",
+          "visual": {
+            "type": "steps",
+            "items": [
+              { "title": "Unggah dokumen", "icon": "upload" },
+              { "title": "Tanya biasa", "icon": "message-circle-question-mark" },
+              { "title": "Jawaban + sumber", "icon": "quote" }
+            ]
+          }
+        }
+      ],
+      "fx": [{ "type": "punch", "at": "melibrain" }]
+    },
+    {
+      "label": "1 · unggah",
+      "transition": "halftone",
+      "text": "Unggah PDF, Word, sampai hasil scan. Melibrain *membaca* semuanya.",
+      "duration": 7,
+      "headline": { "text": "UNGGAH *DOKUMEN*", "num": 1, "at": "unggah" },
+      "visual": {
+        "type": "upload",
+        "base": "Kebijakan HR",
+        "files": [
+          { "name": "Kebijakan_Cuti_2025.pdf", "pages": 12 },
+          { "name": "SOP_Lembur.docx", "pages": 4 },
+          { "name": "Memo_Direksi_scan.pdf", "pages": 2, "ocr": true },
+          { "name": "FAQ_Karyawan.md", "pages": 3 }
+        ]
+      },
+      "fx": [{ "type": "check", "at": "semuanya", "x": 380, "y": -430 }]
+    },
+    {
+      "label": "2 · tanya",
+      "transition": "halftone",
+      "text": "Lalu tanya pakai bahasa sehari-hari, kayak nanya ke *rekan kerja*.",
+      "duration": 8.5,
+      "headline": { "text": "TANYA *BIASA*", "num": 2, "at": "lalu" },
+      "visual": {
+        "type": "ask",
+        "question": "Cuti melahirkan berapa lama ya?",
+        "answer": "Cuti melahirkan 3 bulan dengan gaji penuh [1], dan bisa mulai diambil 6 minggu sebelum perkiraan lahir [2]."
+      },
+      "fx": [{ "type": "ring", "at": "rekan", "x": 0, "y": 60 }]
+    },
+    {
+      "label": "3 · sumber",
+      "transition": "halftone",
+      "text": "Setiap jawaban menyebut *dokumen dan halamannya*, jadi bisa langsung dicek.",
+      "duration": 8,
+      "headline": { "text": "ADA *SUMBERNYA*", "num": 3, "at": "setiap" },
+      "beats": [
+        {
+          "visual": {
+            "type": "sources",
+            "items": [
+              { "title": "Kebijakan_Cuti_2025.pdf", "page": 4, "score": 0.94, "cited": true },
+              { "title": "FAQ_Karyawan.md", "page": 2, "score": 0.81, "cited": true },
+              { "title": "SOP_Lembur.docx", "page": 1, "score": 0.32 }
+            ]
+          }
+        },
+        {
+          "at": "dicek",
+          "visual": {
+            "type": "docPage",
+            "title": "Kebijakan_Cuti_2025.pdf",
+            "page": 4,
+            "before": "Pasal 7. Karyawan perempuan berhak atas",
+            "mark": "cuti melahirkan selama 3 bulan dengan gaji penuh",
+            "after": "sesuai ketentuan perusahaan."
+          }
+        }
+      ],
+      "fx": [{ "type": "burst", "at": "dicek", "x": 300, "y": -330 }]
+    },
+    {
+      "label": "jujur",
+      "transition": "whip",
+      "text": "Kalau jawabannya nggak ada di dokumen, Melibrain bilang *nggak ada*. Bukan menebak.",
+      "duration": 7.5,
+      "visual": {
+        "type": "ask",
+        "refuse": true,
+        "question": "Kantor libur pas Imlek?",
+        "answer": "Basis pengetahuan tidak memuat jawabannya. Coba tambahkan dokumen kalender libur."
+      },
+      "fx": [{ "type": "check", "at": "menebak", "x": 380, "y": -330 }]
+    },
+    {
+      "label": "bonus · melichat",
+      "transition": "zoom",
+      "text": "Dokumen yang sama juga dipakai bot *Melichat* untuk jawab pelanggan.",
+      "duration": 7,
+      "visual": {
+        "type": "chat",
+        "contact": "Pelanggan",
+        "channel": "whatsapp",
+        "messages": [
+          { "from": "customer", "text": "Garansinya berapa lama, Kak?" },
+          { "from": "bot", "text": "Garansi resmi 1 tahun, Kak. Klaim cukup kirim foto nota ya!" },
+          { "from": "note", "text": "Dijawab dari Kebijakan_Garansi.pdf, hal. 2" }
+        ]
+      },
+      "fx": [{ "type": "ring", "at": "melichat", "x": 250, "y": -50 }]
+    },
+    {
+      "label": "the truth",
+      "transition": "zoom",
+      "text": "Tim berhenti *tanya ulang*. Semua pegang jawaban yang sama.",
+      "visual": {
+        "type": "compare",
+        "left": { "title": "Tanpa Melibrain", "items": ["Cari manual", "Tanya berulang", "Jawaban beda"] },
+        "right": { "title": "Pakai Melibrain", "items": ["Jawab cepat", "Ada sumbernya", "Satu versi"] }
+      },
+      "fx": [{ "type": "ring", "at": "sama", "x": 235 }]
+    },
+    {
+      "label": "the action",
+      "bg": "dark",
+      "transition": "halftone",
+      "text": "Biar dokumen kamu yang *menjawab*.",
+      "visual": { "type": "bigText", "text": "TANYA *DOKUMENMU*" },
+      "fx": [{ "type": "burst", "at": "menjawab" }]
+    },
+    {
+      "label": "the cta",
+      "transition": "zoom",
+      "text": "Mau coba Melibrain 14 hari? Komen *BRAIN*, aku kirim link-nya.",
+      "visual": { "type": "cta", "keyword": "BRAIN" },
+      "fx": [
+        { "type": "burst", "at": "komen" },
+        { "type": "ring", "at": "kirim" }
+      ]
+    }
+  ]
+}

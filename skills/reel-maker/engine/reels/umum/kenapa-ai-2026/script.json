@@ -1,0 +1,363 @@
+{
+  "title": "Kenapa harus pakai AI di 2026",
+  "voice": {
+    "sayVoice": "Damayanti",
+    "sayRate": 185,
+    "elevenlabsVoiceId": ""
+  },
+  "scenes": [
+    {
+      "label": "the hook",
+      "bg": "cork",
+      "text": "Di 2026, orang yang *pakai AI* kerjanya jauh lebih cepat dari kamu.",
+      "visual": {
+        "type": "cards",
+        "magnifier": true,
+        "items": [
+          {
+            "image": "img/kerja.jpg",
+            "label": "Kerja"
+          },
+          {
+            "image": "img/catatan.jpg",
+            "label": "Laporan"
+          },
+          {
+            "image": "img/hp-laptop.jpg",
+            "label": "Chat"
+          },
+          {
+            "image": "img/meeting.jpg",
+            "label": "Meeting"
+          },
+          {
+            "image": "img/gadget.jpg",
+            "label": "Tools"
+          }
+        ]
+      },
+      "fx": [
+        {
+          "type": "note",
+          "at": "pakai",
+          "text": "AI?",
+          "x": 220,
+          "y": 120
+        },
+        {
+          "type": "burst",
+          "at": "cepat",
+          "x": 0,
+          "y": -80
+        }
+      ]
+    },
+    {
+      "label": "the roadmap",
+      "text": "Ini *tiga alasan* kenapa kamu harus mulai sekarang.",
+      "headline": {
+        "text": "*3* ALASAN",
+        "at": "tiga"
+      },
+      "beats": [
+        {
+          "visual": {
+            "type": "envelope",
+            "label": "KENAPA?",
+            "items": [
+              "1",
+              "2",
+              "3"
+            ]
+          }
+        },
+        {
+          "at": "harus",
+          "visual": {
+            "type": "steps",
+            "items": [
+              {
+                "title": "Waktu",
+                "icon": "clock"
+              },
+              {
+                "title": "Guru pribadi",
+                "icon": "graduation-cap"
+              },
+              {
+                "title": "Peluang",
+                "icon": "rocket"
+              }
+            ]
+          }
+        }
+      ],
+      "fx": [
+        {
+          "type": "burst",
+          "at": "tiga",
+          "y": -100
+        }
+      ]
+    },
+    {
+      "label": "alasan 1 · waktu",
+      "transition": "halftone",
+      "text": "Alasan pertama, *waktu*. Kerjaan yang dulu berjam-jam, sekarang selesai dalam hitungan menit.",
+      "headline": {
+        "text": "HEMAT *WAKTU*",
+        "num": 1,
+        "at": "waktu"
+      },
+      "beats": [
+        {
+          "visual": {
+            "type": "image",
+            "src": "img/mesin-ketik.jpg",
+            "caption": "cara lama"
+          },
+          "cross": true
+        },
+        {
+          "at": "sekarang",
+          "visual": {
+            "type": "laptop",
+            "image": "img/laptop.jpg",
+            "title": "Selesai dalam 2 menit"
+          }
+        }
+      ],
+      "fx": [
+        {
+          "type": "x",
+          "at": "berjam-jam"
+        },
+        {
+          "type": "check",
+          "at": "menit",
+          "x": 330,
+          "y": -230
+        }
+      ]
+    },
+    {
+      "label": "alasan 1 · contoh",
+      "transition": "whip",
+      "text": "Laporan yang dulu dikerjakan *seharian*, sekarang cukup satu jam.",
+      "beats": [
+        {
+          "visual": {
+            "type": "phone",
+            "image": "img/catatan.jpg",
+            "title": "Laporan *seharian*",
+            "chip": "8 JAM"
+          },
+          "cross": true
+        },
+        {
+          "at": "sekarang",
+          "visual": {
+            "type": "stat",
+            "value": "8 → 1",
+            "label": "jam per laporan",
+            "source": "contoh ilustrasi"
+          }
+        }
+      ],
+      "fx": [
+        {
+          "type": "burst",
+          "at": "satu"
+        }
+      ]
+    },
+    {
+      "label": "alasan 2 · belajar",
+      "transition": "halftone",
+      "text": "Alasan kedua, AI itu *guru pribadi* yang sabar, dua puluh empat jam.",
+      "headline": {
+        "text": "GURU *PRIBADI*",
+        "num": 2,
+        "at": "guru"
+      },
+      "visual": {
+        "type": "app",
+        "name": "Guru *AI*",
+        "color": "#E5322D",
+        "icon": "graduation-cap"
+      },
+      "fx": [
+        {
+          "type": "ring",
+          "at": "sabar"
+        },
+        {
+          "type": "note",
+          "at": "empat",
+          "text": "24/7",
+          "x": 300,
+          "y": -150
+        }
+      ]
+    },
+    {
+      "label": "alasan 2 · contoh",
+      "transition": "whip",
+      "text": "Mau belajar desain, coding, atau bahasa Inggris? Tinggal *tanya*, dia jelaskan pelan-pelan.",
+      "beats": [
+        {
+          "visual": {
+            "type": "browser",
+            "url": "asisten-ai.chat",
+            "title": "Mau belajar apa hari ini?"
+          }
+        },
+        {
+          "at": "tanya",
+          "visual": {
+            "type": "window",
+            "title": "Asisten AI",
+            "prompt": "ajarin aku desain dari nol",
+            "lines": [
+              {
+                "text": "Dasar warna & font",
+                "tag": "desain"
+              },
+              {
+                "text": "Latihan 30 hari",
+                "tag": "rencana"
+              },
+              {
+                "text": "Cek hasil karyamu",
+                "tag": "feedback"
+              }
+            ]
+          }
+        }
+      ],
+      "fx": [
+        {
+          "type": "check",
+          "at": "pelan-pelan",
+          "x": 380,
+          "y": -260
+        }
+      ]
+    },
+    {
+      "label": "alasan 3 · peluang",
+      "transition": "halftone",
+      "text": "Alasan ketiga, *peluang baru*. Satu orang sekarang bisa kerja seperti satu tim.",
+      "headline": {
+        "text": "*PELUANG* BARU",
+        "num": 3,
+        "at": "peluang"
+      },
+      "visual": {
+        "type": "folder",
+        "name": "Bisnis Kamu",
+        "files": [
+          {
+            "label": "konten",
+            "icon": "pen-line"
+          },
+          {
+            "label": "desain",
+            "icon": "palette"
+          },
+          {
+            "label": "marketing",
+            "icon": "trending-up"
+          },
+          {
+            "label": "CS",
+            "icon": "message-circle"
+          }
+        ]
+      },
+      "fx": [
+        {
+          "type": "burst",
+          "at": "tim",
+          "y": -200
+        }
+      ]
+    },
+    {
+      "label": "the truth",
+      "transition": "zoom",
+      "text": "Kamu tidak akan diganti AI, tapi diganti orang yang *pakai AI*.",
+      "visual": {
+        "type": "compare",
+        "left": {
+          "title": "Tanpa AI",
+          "items": [
+            "Kerja manual",
+            "Lembur terus",
+            "Kalah cepat"
+          ]
+        },
+        "right": {
+          "title": "Pakai AI",
+          "items": [
+            "Serba otomatis",
+            "Pulang on time",
+            "Selangkah di depan"
+          ]
+        }
+      },
+      "fx": [
+        {
+          "type": "punch",
+          "at": "tapi"
+        },
+        {
+          "type": "ring",
+          "at": "pakai",
+          "x": 235
+        }
+      ]
+    },
+    {
+      "label": "the action",
+      "bg": "dark",
+      "transition": "halftone",
+      "text": "Jadi jangan tunggu *nanti*. Mulai dari satu tugas kecil hari ini.",
+      "visual": {
+        "type": "bigText",
+        "text": "MULAI *HARI INI*"
+      },
+      "fx": [
+        {
+          "type": "note",
+          "at": "kecil",
+          "text": "cth: balas email",
+          "y": 300
+        },
+        {
+          "type": "burst",
+          "at": "hari"
+        }
+      ]
+    },
+    {
+      "label": "the cta",
+      "transition": "zoom",
+      "text": "Mau daftar tools AI gratis yang aku pakai? Komen *AI*, nanti aku kirim.",
+      "visual": {
+        "type": "cta",
+        "keyword": "AI"
+      },
+      "fx": [
+        {
+          "type": "burst",
+          "at": "komen"
+        },
+        {
+          "type": "ring",
+          "at": "kirim"
+        }
+      ]
+    }
+  ]
+}
